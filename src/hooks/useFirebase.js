@@ -92,6 +92,7 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, [auth])
 
+ // check is admin
   useEffect(() => {
     fetch(`https://agile-oasis-96730.herokuapp.com/users/${user.email}`)
       .then(res => res.json())
